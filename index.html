@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="./styles/reset.css">
+  <link rel="stylesheet" href="./styles/style.css">
+</head>
+<body>
+
+  <div class="App">
+    <header class="header">
+      <div class="header__left">
+        <h1 class="header__left-title">
+          <a href="index.html">sneakers</a>
+        </h1>
+        <nav class="header__left-nav">
+          <a class="header__left-nav-link" href="#/collections">
+            Collections
+          </a>
+          <a class="header__left-nav-link" href="#/men">
+            Men
+          </a>
+          <a class="header__left-nav-link" href="#/woman">
+            Women
+          </a>
+          <a class="header__left-nav-link" href="#/about">
+            About
+          </a>
+          <a class="header__left-nav-link" href="#/contact">
+            Contact
+          </a>
+        </nav>
+      </div>
+      <div class="header__right">
+        <div id="cart" class="header__right-action">
+          <a class="header__right-action-link" href="#/cart">
+            <img class="header__right-action-link-img" src="./img/icon-cart.svg" alt="Cart">
+          </a>
+          <div class="cartModal">
+            <div class="cartModal__content">
+              <div class="cartModal__content-header">
+                <h3 class="cartModal__content-header-title">Cart</h3>
+              </div>
+              <!-- Ajouter la classe cartModal__content-main--notEmpty -->
+              <div class="cartModal__content-main cartModal__content-main--notEmpty">
+                <p class="cartModal__content-main-emptyMessage">
+                  Your cart is empty.
+                </p>
+                <div class="cartModal__content-main-list">
+                  <div class="cartModal__content-main-list-product">
+                    <img class="cartModal__content-main-list-product-thumbnail" src="./img/image-product-1-thumbnail.jpg" alt="">
+                    <div class="cartModal__content-main-list-product-description">
+                      <span class="cartModal__content-main-list-product-description-name">Fall Limited Edition Sneakers</span>
+                      <div class="cartModal__content-main-list-product-description-price">
+                        $<span class="cartModal__content-main-list-product-description-price-unit">125.00</span>
+                        &nbsp;x&nbsp;<span class="cartModal__content-main-list-product-description-price-number">3</span>
+                        &nbsp;<span class="cartModal__content-main-list-product-description-price-total">$375.00</span>
+                      </div>
+                    </div>
+                    <img class="cartModal__content-main-list-product-delete" src="./img/icon-delete.svg" alt="">
+                  </div>
+                  <div class="cartModal__content-main-list-product">
+                    <img class="cartModal__content-main-list-product-thumbnail" src="./img/image-product-1-thumbnail.jpg" alt="">
+                    <div class="cartModal__content-main-list-product-description">
+                      <span class="cartModal__content-main-list-product-description-name">Fall Limited Edition Sneakers</span>
+                      <div class="cartModal__content-main-list-product-description-price">
+                        $<span class="cartModal__content-main-list-product-description-price-unit">125.00</span>
+                        &nbsp;x&nbsp;<span class="cartModal__content-main-list-product-description-price-number">3</span>
+                        &nbsp;<span class="cartModal__content-main-list-product-description-price-total">$375.00</span>
+                      </div>
+                    </div>
+                    <img class="cartModal__content-main-list-product-delete" src="./img/icon-delete.svg" alt="">
+                  </div>
+                </div>
+                <a class="cartModal__content-main-checkout" href="#/checkout">
+                  Checkout
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="account" class="header__right-action">
+          <a class="header__right-action-link" href="#/account">
+            <img class="header__right-action-link-img" src="./img/image-avatar.png" alt="Account">
+          </a>
+        </div>
+      </div>
+    </header>
+  
+    <main class="main">
+      main
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
+
+
