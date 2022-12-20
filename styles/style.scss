@@ -46,19 +46,24 @@ body {
   }
 }
 
+$maxWidthApp: 1440px;
+
 .App {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  height: fit-content;
   width: 100%;
-  max-width: 1440px;
+  max-width: $maxWidthApp;
 }
 
 .header {
   border-bottom: 0.15rem solid var(--lightGrayishBlue);
   max-width: 100vw;
   width: 100%;
+  position: sticky;
+  top: 0;
+  background-color: #FFFFFF;
+  z-index: 1;
   
   &__content {
     display: flex;
@@ -558,12 +563,31 @@ body {
   bottom: 0;
   left: 50%;
   transform: translate(-50%, 100%);
-  z-index: 5;
+  transition: transform 200ms;
+  z-index: 1;
 
   display: none;
   border-radius: 0.6rem;
 
   $cartModal: &;
+
+
+  &__content {
+    
+    &__main {
+  
+      &__list {
+  
+        &__product {
+  
+          &__delete {
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+
 
   &--isOpen {
     display: block !important;
@@ -744,6 +768,7 @@ body {
   height: 100%;
   padding: 3rem;
   box-sizing: border-box;
+  z-index: 1;
 
   display: none;
   justify-content: center;
@@ -935,6 +960,13 @@ body {
   }
 }
 
+@media screen and (min-width: 426px) and (max-width:  calc($maxWidthApp + 8rem)) {
+  .cartModal {
+    transform: translate(-68%, 100%);
+    transition: transform 200ms;
+  }
+}
+
 @media screen and (max-width: 425px) {
 
   .App {
@@ -994,7 +1026,7 @@ body {
           top: 0;
           left: 0;
           transform: translate(-100%, 0);
-          z-index: 1;
+          z-index: 2;
           height: 100%;
           width: 65%;
           transition: transform 500ms;

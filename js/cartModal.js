@@ -17,6 +17,15 @@ const cartModal = {
     cartModal.updateElement();
   },
 
+  removeArticleInCart: (id) => {
+    const { cart } = cartModal.states;
+
+    const index = cart.findIndex(article => article.id === id);
+    cart.splice(index, 1);
+    cartModal.updateElement();
+    addToCart.updateElement();
+  },
+
   createProductInCartModal: (
     id,
     thumbnail,
@@ -41,6 +50,9 @@ const cartModal = {
     const productDelete = app.functionCreateElement('img', ['cartModal__content__main__list__product__delete'], {
       src: './img/icon-delete.svg',
       alt: 'delete-icon',
+    });
+    productDelete.addEventListener('click', () => {
+      cartModal.removeArticleInCart(id);
     });
 
     const productDescriptionName = app.functionCreateElement('span', ['cartModal__content__main__list__product__description__name'], {
