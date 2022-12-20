@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Sneakers</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,97 +12,148 @@
 
   <link rel="stylesheet" href="./styles/reset.css">
   <link rel="stylesheet" href="./styles/style.css">
+  <script src="./js/index.js"></script>
+  <script src="./js/zoomModal.js"></script>
+  <script src="./js/cartModal.js"></script>
+  <script src="./js/addToCart.js"></script>
 </head>
 <body>
 
   <div class="App">
     <header class="header">
-      <div class="header__left">
-        <h1 class="header__left-title">
-          <a href="index.html">sneakers</a>
-        </h1>
-        <nav class="header__left-nav">
-          <a class="header__left-nav-link" href="#/collections">
-            Collections
+      <div class="header__content">
+        <div class="header__content__left">
+          <div class="header__content__left__openMenuButton">
+            <img class="header__content__left__openMenuButton__icon" src="./img/icon-menu.svg" alt="Menu">
+          </div>
+          <a class="header__content__left__logo" href="index.html">
+            <img class="header__content__left__logo__icon" src="./img/logo.svg" alt="Logo">
           </a>
-          <a class="header__left-nav-link" href="#/men">
-            Men
-          </a>
-          <a class="header__left-nav-link" href="#/woman">
-            Women
-          </a>
-          <a class="header__left-nav-link" href="#/about">
-            About
-          </a>
-          <a class="header__left-nav-link" href="#/contact">
-            Contact
-          </a>
-        </nav>
-      </div>
-      <div class="header__right">
-        <div id="cart" class="header__right-action">
-          <a class="header__right-action-link" href="#/cart">
-            <img class="header__right-action-link-img" src="./img/icon-cart.svg" alt="Cart">
-          </a>
-          <div class="cartModal">
-            <div class="cartModal__content">
-              <div class="cartModal__content-header">
-                <h3 class="cartModal__content-header-title">Cart</h3>
+          <nav class="header__content__left__nav">
+            <div class="header__content__left__nav__content">
+              <div class="header__content__left__nav__content__closeMenuButton">
+                <img class="header__content__left__nav__content__closeMenuButton__icon" src="./img/icon-close.svg" alt="Close Menu">
               </div>
-              <!-- Ajouter la classe cartModal__content-main--notEmpty -->
-              <div class="cartModal__content-main cartModal__content-main--notEmpty">
-                <p class="cartModal__content-main-emptyMessage">
-                  Your cart is empty.
-                </p>
-                <div class="cartModal__content-main-list">
-                  <div class="cartModal__content-main-list-product">
-                    <img class="cartModal__content-main-list-product-thumbnail" src="./img/image-product-1-thumbnail.jpg" alt="">
-                    <div class="cartModal__content-main-list-product-description">
-                      <span class="cartModal__content-main-list-product-description-name">Fall Limited Edition Sneakers</span>
-                      <div class="cartModal__content-main-list-product-description-price">
-                        $<span class="cartModal__content-main-list-product-description-price-unit">125.00</span>
-                        &nbsp;x&nbsp;<span class="cartModal__content-main-list-product-description-price-number">3</span>
-                        &nbsp;<span class="cartModal__content-main-list-product-description-price-total">$375.00</span>
-                      </div>
-                    </div>
-                    <img class="cartModal__content-main-list-product-delete" src="./img/icon-delete.svg" alt="">
-                  </div>
-                  <div class="cartModal__content-main-list-product">
-                    <img class="cartModal__content-main-list-product-thumbnail" src="./img/image-product-1-thumbnail.jpg" alt="">
-                    <div class="cartModal__content-main-list-product-description">
-                      <span class="cartModal__content-main-list-product-description-name">Fall Limited Edition Sneakers</span>
-                      <div class="cartModal__content-main-list-product-description-price">
-                        $<span class="cartModal__content-main-list-product-description-price-unit">125.00</span>
-                        &nbsp;x&nbsp;<span class="cartModal__content-main-list-product-description-price-number">3</span>
-                        &nbsp;<span class="cartModal__content-main-list-product-description-price-total">$375.00</span>
-                      </div>
-                    </div>
-                    <img class="cartModal__content-main-list-product-delete" src="./img/icon-delete.svg" alt="">
+              <ul class="header__content__left__nav__content__list">
+                <li class="header__content__left__nav__content__list__item">
+                  <a class="header__content__left__nav__content__list__item__link" href="#/collections">
+                    Collections
+                  </a>
+                </li>
+                <li class="header__content__left__nav__content__list__item">
+                  <a class="header__content__left__nav__content__list__item__link" href="#/men">
+                    Men
+                  </a>
+                </li>
+                <li class="header__content__left__nav__content__list__item">
+                  <a class="header__content__left__nav__content__list__item__link" href="#/woman">
+                    Women
+                  </a>
+                </li>
+                <li class="header__content__left__nav__content__list__item">
+                  <a class="header__content__left__nav__content__list__item__link" href="#/about">
+                    About
+                  </a>
+                </li>
+                <li class="header__content__left__nav__content__list__item">
+                  <a class="header__content__left__nav__content__list__item__link" href="#/contact">
+                    Contact
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+        </div>
+        <div class="header__content__right">
+          <div class="header__content__right__action header__content__right__action--cart">
+            <div class="header__content__right__action__button">
+              <img class="header__content__right__action__button__img" src="./img/icon-cart.svg" alt="Cart">
+            </div>
+            <div class="cartModal">
+              <div class="cartModal__content">
+                <div class="cartModal__content__header">
+                  <h3 class="cartModal__content__header__title">Cart</h3>
+                  <div class="cartModal__content__header__closeButton">
+                    <img class="cartModal__content__header__closeButton__icon" src="./img/icon-close.svg" alt="closeButton">
                   </div>
                 </div>
-                <a class="cartModal__content-main-checkout" href="#/checkout">
-                  Checkout
-                </a>
+                <div class="cartModal__content__main">
+                  <p class="cartModal__content__main__emptyMessage">
+                    Your cart is empty.
+                  </p>
+                  <div class="cartModal__content__main__list">
+                  </div>
+                  <div class="cartModal__content__main__checkout">
+                    <a class="cartModal__content__main__checkout__button" href="#/cart">
+                      Checkout
+                    </a>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-        <div id="account" class="header__right-action">
-          <a class="header__right-action-link" href="#/account">
-            <img class="header__right-action-link-img" src="./img/image-avatar.png" alt="Account">
-          </a>
+          <div class="header__content__right__action header__content__right__action--account">
+            <a class="header__content__right__action__link" href="#/account">
+              <img class="header__content__right__action__link__img" src="./img/image-avatar.png" alt="Account">
+            </a>
+          </div>
         </div>
       </div>
     </header>
   
     <main class="main">
-      main
-    </main>
-  </div>
+      <div class="main__left">
 
-  <script src="script.js"></script>
+        <div class="main__left__imgContainer">
+          <div class="main__left__imgContainer__button main__left__imgContainer__button--previousButton">
+            <img class="main__left__imgContainer__button__icon" src="./img/icon-previous.svg" alt="Next">
+          </div>
+          <div class="main__left__imgContainer__button main__left__imgContainer__button--nextButton">
+            <img class="main__left__imgContainer__button__icon" src="./img/icon-next.svg" alt="Next">
+          </div>
+        </div>
+
+        <div class="main__left__list">
+          
+        </div>
+      </div>
+
+      <div class="main__right">
+        <div class="main__right__product">
+          <div class="main__right__product__actions">
+
+            <button 
+            id="addToCartButton" class="main__right__product__actions__addToCartButton" type="button">
+              <img class="main__right__product__actions__addToCartButton__icon" src="./img/icon-cart.svg" alt="">
+              Add to cart
+            </button>
+          </div>
+        </div>
+      </div>
+
+    </main>
+
+
+    <div class="zoomModal">
+      <div class="zoomModal__content">
+        <div class="zoomModal__content__closeButton">
+          <img class="zoomModal__content__closeButton__icon" src="./img/icon-close.svg" alt="Close">
+        </div>
+
+        <div class="zoomModal__content__imgContainer">
+          <div class="zoomModal__content__imgContainer__button zoomModal__content__imgContainer__button--previousButton">
+            <img class="zoomModal__content__imgContainer__button__icon" src="./img/icon-previous.svg" alt="Next">
+          </div>
+          <div class="zoomModal__content__imgContainer__button zoomModal__content__imgContainer__button--nextButton">
+            <img class="zoomModal__content__imgContainer__button__icon" src="./img/icon-next.svg" alt="Next">
+          </div>
+        </div>
+
+        <div class="zoomModal__content__list">
+        </div>
+
+      </div>
+    </div>
+  </div>
 </body>
 </html>
-
-
-

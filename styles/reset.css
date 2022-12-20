@@ -51,5 +51,6 @@ a {
   text-decoration: none;
 }
 button {
-  font-family: inherit
+  font-family: inherit;
+  touch-action: manipulation;
 }
